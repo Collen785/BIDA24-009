@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback | ZenCell</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <a href="index.html">
+        <img src="images/ZenCell logo.png" alt="ZenCell Logo" class="logo" />
+      </a>
+      <nav class="nav-buttons">
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="buy.html" class="nav-btn">Buy Phones</a>
+        <a href="sell.html" class="nav-btn">Sell</a>
+        <a href="contact.html" class="nav-btn">Contact</a>
+        <a href="feedback.html" class="nav-btn">Feedback</a>
+        <a href="faq.html" class="nav-btn">FAQs</a>
+        <a href="about.html" class="nav-btn">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Feedback Form Section -->
+  <section class="form-section">
+    <div class="form-container">
+      <h2>We Value Your Feedback</h2>
+      <p>Please fill in the form below to share your thoughts or concerns about ZenCell.</p>
+
+      <form action="https://formspree.io/f/xyzwleqw" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+      
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+      
+        <label for="rating">Rate Your Experience:</label>
+        <select id="rating" name="rating" required>
+          <option value="">-- Select Rating --</option>
+          <option value="5">★★★★★ - Excellent</option>
+          <option value="4">★★★★☆ - Very Good</option>
+          <option value="3">★★★☆☆ - Good</option>
+          <option value="2">★★☆☆☆ - Fair</option>
+          <option value="1">★☆☆☆☆ - Poor</option>
+        </select>
+      
+        <label for="message">Feedback:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      
+        <button type="submit" class="btn">Submit Feedback</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ZenCell. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Back Arrow -->
+  <a href="index.html" class="floating-arrow">←</a>
+
+</body>
+</html>

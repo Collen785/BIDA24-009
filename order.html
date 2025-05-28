@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Place Order | ZenCell</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ✅ ZenCell Header Navigation -->
+  <header>
+    <div class="container">
+      <a href="index.html">
+        <img src="images/logo.png" alt="ZenCell Logo" class="logo" />
+      </a>
+      <nav class="nav-buttons">
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="buy.html" class="nav-btn">Buy Phones</a>
+        <a href="sell.html" class="nav-btn">Sell</a>
+        <a href="contact.html" class="nav-btn">Contact</a>
+        <a href="feedback.html" class="nav-btn">Feedback</a>
+        <a href="faq.html" class="nav-btn">FAQs</a>
+        <a href="about.html" class="nav-btn">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ✅ Order Form Section -->
+  <section class="form-section">
+    <div class="form-container">
+      <h2>Place Your Order</h2>
+      <p>Fill in the form below to order your selected phone.</p>
+
+      <form action="https://formspree.io/f/yourFormID" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phoneModel">Phone Model:</label>
+        <input type="text" id="phoneModel" name="phoneModel" required>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+
+        <label for="address">Delivery Address:</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+
+        <button type="submit" class="btn">Submit Order</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ZenCell. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Optional: Floating Back Arrow -->
+  <a href="buy.html" class="floating-arrow">←</a>
+
+  <!-- ✅ JS for pre-filling model name (optional) -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const model = params.get("model");
+    if (model) {
+      document.getElementById("phoneModel").value = model;
+    }
+  </script>
+
+</body>
+</html>
